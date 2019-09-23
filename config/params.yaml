@@ -1,23 +1,4 @@
 lobot:
-  # joint_state_controller:
-  #   type: "ros_controllers::JointStateController"
-  #   joints:
-  #     - leg_right_1_joint
-  #     - leg_right_2_joint
-  #     - leg_right_3_joint
-  #     - leg_right_4_joint
-  #     - leg_right_5_joint
-  #     - leg_left_1_joint
-  #     - leg_left_2_joint
-  #     - leg_left_3_joint
-  #     - leg_left_4_joint
-  #     - leg_left_5_joint
-  #     - arm_right_1_joint
-  #     - arm_right_2_joint
-  #     - arm_right_3_joint
-  #     - arm_left_1_joint
-  #     - arm_left_2_joint
-  #     - arm_left_3_joint
   joint_position_controller:
     type: "ros_controllers::JointPositionController"
     joints:
@@ -37,5 +18,4 @@ lobot:
       - arm_left_1_joint
       - arm_left_2_joint
       - arm_left_3_joint
-
-
+    pid: {p: 2.0, i: 0.2, d: 1, i_min: -100, i_max: 100, antiwindup: True}
