@@ -18,7 +18,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(robot_hardware_interface REQUIRED)
+find_package(ros2_control_robot REQUIRED)
 find_package(controller_manager REQUIRED)
 find_package(controller_interface REQUIRED)
 find_package(parameter_server_interfaces REQUIRED)
@@ -38,7 +38,7 @@ endif()
 add_executable(lobot_control_exec src/control_exec.cpp)
 ament_target_dependencies(lobot_control_exec 
   rclcpp 
-  robot_hardware_interface
+  ros2_control_robot
   controller_manager
   controller_interface
   parameter_server_interfaces
