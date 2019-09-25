@@ -8,5 +8,5 @@ def generate_launch_description():
     pkgShareDir  = get_package_share_directory('lobot_control_main')
     configDir = os.path.join(pkgShareDir, 'config', 'params.yaml')
     node1 = launch_ros.actions.Node(
-        package='my_parameter_server', node_executable='param_server_exec', arguments=[configDir], output='screen')
+        package='ros2_control_parameter_server', node_executable='param_server_exec', arguments=[configDir], output='screen')
     return launch.LaunchDescription([node1])
